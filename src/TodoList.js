@@ -37,7 +37,7 @@ function TodoList() {
                 <Modal.Header >
                     <Modal.Title>Confirm Action</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Are you sure you want delte?</Modal.Body>
+                <Modal.Body>Are you sure you want delete???</Modal.Body>
                 <Modal.Footer>
                     <Button variant="info" onClick={() => dispatch(closemodal())}>
                         Close

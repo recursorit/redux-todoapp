@@ -8,12 +8,12 @@ function TodoItem({ todo }) {
     const [name, setName] = useState(todo.name)
     return (
         <tr>
-            <td className='text-center mt-5'>{todo.id}.</td>
+            <td className='text-center p-3'>{todo.id}.</td>
             {editable ? <input autoFocus type="text" className="form-control"
                 value={name}
                 onChange={(e) => {
                     setName(e.target.value);
-                }} /> : <td className='text-center mt-5'>{todo.name}</td>}
+                }} /> : <td className='text-center p-3'>{todo.name}</td>}
             <td className='text-center'>
             {editable ?  <Button onClick={() => {
                     dispatch(editTodo({
