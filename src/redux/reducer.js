@@ -2,7 +2,6 @@ import { ADD_TODO, EDIT_TODO, DELETE_TODO } from './actions'
 
 const initialState = []
 
-
 export const reducer = (state = initialState, action) => {
     let newTodos;
     switch (action.type) {
@@ -31,3 +30,5 @@ export const reducer = (state = initialState, action) => {
         default: return state
     }
 }
+
+

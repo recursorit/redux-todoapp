@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 function TodoInput() {
     const [name, setName] = useState()
     const dispatch = useDispatch()
-    const todos = useSelector(state => state)
+    const todos = useSelector(state => state.initialState)
     let id = todos.length + 1
     return (
         <Row className='justify-content-center mt-5'>
