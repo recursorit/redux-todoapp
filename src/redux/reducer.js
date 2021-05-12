@@ -14,17 +14,18 @@ export const reducer = (state = initialState, action) => {
             let index = -1;
             for (let i = 0; i < newTodos.length; i++) {
                 index++;
-                if (newTodos[i].id == action.payload.id) {
+                if (newTodos[i].id === action.payload.id) {
                     break;
                 }
             }
-            if (index != -1) {
+            if (index !== -1) {
                 newTodos[index] = action.payload;
                 return newTodos;
             }
+            break;
         case DELETE_TODO:
             newTodos = [...state]
-            newTodos = newTodos.filter(todo => todo.id != action.payload)
+            newTodos = newTodos.filter(todo => todo.id !== action.payload)
             return newTodos
 
         default: return state
